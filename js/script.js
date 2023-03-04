@@ -107,7 +107,55 @@
 //------------------------------------------
 //função reduce
 
-const valores = [1, 2, 3, 4]
-const soma = valores.reduce((ac, v) => {return ac + v})
-console.log(soma)
+// const valores = [1, 2, 3, 4]
+// const soma = valores.reduce((ac, v) => {return ac + v})
+// console.log(soma)
 //------------------------------------------
+
+//------------------------------------------
+//Funções
+
+// function hello(){
+//   console.log("Hello")
+// }
+// hello()
+
+// function hello(nome){
+//   console.log("Hello" + nome)
+// }
+// hello("Flavia")
+
+// function soma(a, b){
+//   return a + b 
+// }
+// console.log(soma(2, 3))
+
+// const dobro = function(n){
+//   return 2*n
+// }
+// const res = dobro(5)
+// console.log(res)
+
+//valor padrão para um parâmetro
+// const triplo = function(n = 5){
+//   return n*3
+// }
+// console.log(triplo())
+// console.log(triplo(7))
+//------------------------------------------
+
+//------------------------------------------
+//Arrow functions
+
+//a => {console.log(a)}
+//(a, b) => console.log(a + b) //syntax sugar
+//const teste = (a, b, c) => a*b*c
+
+// const hello = () => console.log("Hello")
+// console.log(hello())
+
+// const dobro = valor => valor*2
+// console.log(dobro(2))
+
+const ehPar = (n) => {return n % 2 === 0}
+console.log(ehPar(3))
