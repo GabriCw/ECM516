@@ -236,3 +236,102 @@
 // eAgoraResult.f1()
 // eAgoraResult.f2()
 //------------------------------------------
+
+//------------------------------------------
+//objetos literais JavaScript (JSON)
+
+//uma pessoa que se chama João e tem 17 anos
+
+// let pessoa = {
+//   nome: "João",
+//   idade: 17
+// }
+// //para acessar esses valores se usa : . e [""]
+// console.log(pessoa.nome)
+// console.log(pessoa["idade"])
+
+//uma pessoa que se chama Maria, tem 21 anos e mora na Rua B, 121
+
+// let pessoa = {
+//   nome: "Maria",
+//   idade: 21,
+//   endereco: {
+//     rua: "Rua B",
+//     numero: 121
+//   }
+// }
+// console.log(pessoa["nome"])
+// console.log(pessoa["idade"])
+// console.log(pessoa["endereco"])
+// console.log(pessoa["endereco"]["rua"])
+
+//uma concessionária tem CNPJ e endereço (rua e número). 
+//ela possui 3 veículos no seu estoque, cada um tem modelo, marca e ano de fabricação
+
+let concessionaria = {
+  CNPJ: "11.235.234/0001.23",
+  endereco: {
+    rua: "Rua B",
+    numero: 121
+  },
+  veiculos:{
+    carro1: {
+      modelo:"Ka",
+      marca: "Ford",
+      ano: 2020
+    },
+    carro2: {
+      modelo:"Strada",
+      marca: "Fiat",
+      ano: 2020
+    },
+    carro3: {
+      modelo:"HB20",
+      marca: "Hyundai",
+      ano: 2020
+    }
+  }
+}
+// console.log(concessionaria["CNPJ"])
+// console.log(concessionaria["endereco"])
+// console.log(concessionaria["veiculos"])
+// console.log(concessionaria["veiculos"]["carro3"])
+
+let concessionaria2 = {
+  CNPJ: "11.235.234/0001.23",
+  endereco: {
+    rua: "Rua B",
+    numero: 121
+  },
+  veiculos:[
+    {
+      modelo:"Ka",
+      marca: "Ford",
+      ano: 2020
+    },
+    {
+      modelo:"Strada",
+      marca: "Fiat",
+      ano: 2020
+    },
+    {
+      modelo:"HB20",
+      marca: "Hyundai",
+      ano: 2020
+    }
+  ]
+}
+for( let veiculo of concessionaria2.veiculos){
+  console.log(veiculo)
+}
+
+//calculadora que soma dois valores e subtrair um valor do outro
+
+let calc = {
+  soma: (a,b) => a + b,
+  subtracao: function(a,b){
+    return a - b
+  }
+}
+console.log(calc.soma(2,3))
+//------------------------------------------
