@@ -157,5 +157,82 @@
 // const dobro = valor => valor*2
 // console.log(dobro(2))
 
-const ehPar = (n) => {return n % 2 === 0}
-console.log(ehPar(3))
+//const ehPar = (n) => {return n % 2 === 0}
+//console.log(ehPar(3))
+
+//------------------------------------------
+//closures
+
+// let umaFuncao = function () {
+//   console.log("Fui armazenada em uma variável")
+// }
+
+// umaFuncao()
+
+//função de alta ordemm (higher order function)
+
+// function f (funcao){
+//   funcao()
+// }
+
+// f(function () {
+//   console.log("Estou sendo passado para f")
+// })
+
+//função de alta ordemm (higher order function)
+
+// function g (){
+//   function outraFuncao(){
+//     console.log("Fui criada por g")
+//     return function(){
+//       console.log("Até Logo")
+//     }
+//   }
+//   return outraFuncao
+// }
+
+// const gResult = g()
+// gResult() 
+//as linhas 191 e 192 são equivalentes a : g()()
+
+// f(g()) // chama o return de g (outraFuncao())
+// f(g()()) //chama o retorno de outraFuncao (function())
+
+// function f (){
+//   let nome = "Joao"
+//   function g(){
+//     let a
+//     console.log(nome)
+//   }
+//   g()
+// }
+// f()
+
+// function saudacoesFactor(saudacao, nome) {
+//   return function(){
+//     console.log(saudacao + ", " + nome)
+//   }
+// }
+
+// let olaJoao = saudacoesFactor("Olá", "João")
+// let tchauJoao = saudacoesFactor("Tchau", "João")
+
+// olaJoao()
+// tchauJoao()
+
+// function eAgora(){
+//   let cont = 1
+//   function f1(){
+//     console.log(cont)
+//   }
+//   cont++
+//   function f2(){
+//     console.log(cont)
+//   }
+//   return {f1, f2} //só aqui o valor cont está sendo vinculado em f1 e f2
+// }
+
+// let eAgoraResult = eAgora()
+// eAgoraResult.f1()
+// eAgoraResult.f2()
+//------------------------------------------
