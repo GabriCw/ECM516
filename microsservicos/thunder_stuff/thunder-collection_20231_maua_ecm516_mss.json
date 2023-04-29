@@ -1,0 +1,50 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "20231_maua_ecm516_mss",
+    "dateExported": "2023-04-29T12:30:26.457Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "ba401735-7e30-44fd-8dae-f663d59b2c90",
+            "name": "lembretes",
+            "containerId": "",
+            "created": "2023-04-29T12:28:13.679Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "8d8faea3-65cc-43d2-a1c6-588a6d87bec4",
+            "colId": "289bf8e5-c30c-4053-bd45-dbb9a0babb84",
+            "containerId": "ba401735-7e30-44fd-8dae-f663d59b2c90",
+            "name": "Obter Lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-29T12:27:55.097Z",
+            "modified": "2023-04-29T12:28:15.765Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dc8b18a3-762b-4084-959b-7f5688a9039c",
+            "colId": "289bf8e5-c30c-4053-bd45-dbb9a0babb84",
+            "containerId": "ba401735-7e30-44fd-8dae-f663d59b2c90",
+            "name": "Salvar Lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-29T12:28:45.091Z",
+            "modified": "2023-04-29T12:28:45.091Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
