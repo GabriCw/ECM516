@@ -27,8 +27,8 @@ app.get('/medicos', (req, res) => {
     console.log(bdResult)
     res.status(200).end()
   })
-  .catch(err => {
-    console.log(err)
+  .catch(e => {
+    console.log(e)
     res.status(500).end()
   })
 })
