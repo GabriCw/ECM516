@@ -31,10 +31,16 @@ app.get('/lembretes', (req, res) => {
 })
 
 app.post('/eventos', (req, res) => {
-  const evento = req.body // {tipo: ... , dados: ...}
-  const funcao = funcoes[evento.tipo]
-  funcao(evento.dados)
-  //na apostila : funcoes[req.body.tipo](req.body.dados)
+  try{
+    const evento = req.body // {tipo: ... , dados: ...}
+    const funcao = funcoes[evento.tipo]
+    funcao(evento.dados)
+    //na apostila : funcoes[req.body.tipo](req.body.dados)
+  }
+  catch(e){
+
+  }
+  res.status(200).send({msg: "ok"})
 })
 
 app.listen(process.env.PORT, () => {
