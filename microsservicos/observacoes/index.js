@@ -9,10 +9,20 @@ app.use(express.json())
 const funcoes = {
   ObservacaoClassificada: (observacao) => {
     //1. buscar a obs na base local
-
+    const observacoes = observacoesPorLembreteId[observacao.lembreteId]
+    const obsParaAtualizar = observacoes.find(o => o.id === observacao.id)
     //2. atualizar o status da obs na base local
-
+    obsParaAtualizar.status = observacao.status
     //3. emitir um evento do tipo ObservacaoAtualizada contendo a obs atualizada
+    axios.post('http://localhost:10000/eventos', {
+      tipo: "ObservacaoAtualizada",
+      dados: {
+        id: observacao.id,
+        texto: observacao.texto,
+        lembreteId: observacao.lembreteId,
+        status: observacao.status
+      }
+    })
   }
 }
 
@@ -49,6 +59,7 @@ app.post('/lembretes/:id/observacoes', async (req, res) => {
 app.post('/eventos', (req, res) => {
   try{
     console.log(req.body)
+    funcoes[req.body.tipo](req.body.dados)
   }
   catch(e){
 
