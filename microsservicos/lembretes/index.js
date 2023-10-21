@@ -39,5 +39,6 @@ app.post("/eventos", (req, res) => {
 const PORT = process.env.PORT || 4000
 app.listen(PORT || 4000, () => {
   console.log('Nova versão')
+  console.log('Agora usando Docker Hub')
   console.log(`Lembretes. Porta ${PORT}`)
 })
