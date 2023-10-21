@@ -12,7 +12,7 @@ const funcoes = {
       observacao.texto.includes(palavraChave) ? 
       "importante" : 
       "comum"
-    axios.post("http://localhost:10000/eventos", {
+    axios.post("http://barramento-de-eventos-service:10000/eventos", {
       tipo: "ObservacaoClassificada",
       dados: observacao
     })    

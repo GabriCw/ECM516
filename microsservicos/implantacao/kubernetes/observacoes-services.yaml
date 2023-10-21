@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: observacoes-service
+spec:
+  #porta externa, acessivel fora do cluster
+  type: NodePort
+  selector:
+    app: observacoes
+  ports:
+    - name: observacoes
+      protocol: TCP
+      port: 5000
+      targetPort: 5000
